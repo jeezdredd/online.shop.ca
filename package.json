@@ -1,0 +1,15 @@
+{
+  "name": "electronics-store",
+  "version": "1.0.0",
+  "description": "An online electronics store project",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.7"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Your Name",
+  "license": "ISC"
+}
