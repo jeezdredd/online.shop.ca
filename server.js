@@ -1,18 +1,15 @@
 const express = require("express");
 const app = express();
+const db = require("./config/db");
+const apiRoutes = require("./routes/api");
 
-// Массив с имитацией данных о продуктах
-const products = [
-    { id: 1, name: "Smartphone", price: 500 },
-    { id: 2, name: "Laptop", price: 1000 },
-    { id: 3, name: "Tablet", price: 300 },
-    // ...
-];
+app.use(express.json());
 
-// API для получения списка товаров
-app.get("/api/products", (req, res) => {
-    res.json(products);
-});
+// Маршруты API
+app.use("/api", apiRoutes);
+
+// Статические файлы
+app.use(express.static("public"));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
