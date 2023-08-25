@@ -1,4 +1,4 @@
-# NOT FOR COMMERCIAL USE
+# NOT FOR COMMERCIAL USE / НЕ ДЛЯ КОММЕРЧЕСКОГО ИСПОЛЬЗОВАНИЯ
 Basic template of a working online shop for selling electronics.
 
 # Онлайн магазин электроники
