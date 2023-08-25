@@ -10,7 +10,7 @@ fetch("/api/products")
             productCard.innerHTML = `
                 <h2>${product.name}</h2>
                 <p>Price: $${product.price}</p>
-                <button onclick="addToCart(${product.id})">Add to Cart</button>
+                <button onclick="addToCart('${product._id}')">Add to Cart</button>
             `;
             productsContainer.appendChild(productCard);
         });
@@ -18,6 +18,9 @@ fetch("/api/products")
 
 // Пример функции добавления в корзину
 function addToCart(productId) {
-    // Логика добавления товара в корзину
-    alert(`Product with ID ${productId} added to cart.`);
+    fetch(`/api/cart/${productId}`, { method: "POST" })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+        });
 }
