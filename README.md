@@ -21,11 +21,16 @@ Backend: Node.js, Express.js
 
 # Структура проекта: 
 
+- config/
+  - db.js
+- models/
+  - Product.js
 - public/
   - index.html
   - style.css
   - script.js
+- routes/
+  - api.js
 - server.js
 - package.json
 - package-lock.json
-
